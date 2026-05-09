@@ -1,0 +1,36 @@
+{
+  "title": "Es sind nicht die perfekten Momente, die bleiben. Es sind die Echten.",
+  "description": "Eure Hochzeit erzählt sich in Blicken, Berührungen und kleinen Gesten. Ich bin da, um sie festzuhalten – unaufdringlich und ehrlich.",
+  "packages": [
+    {
+      "name": "Standesamt & Feier",
+      "price": "ab 200 €",
+      "hours": "2",
+      "features": [
+        "2 Stunden Begleitung",
+        "50 bearbeitete Fotos",
+        "Online-Galerie"
+      ]
+    },
+    {
+      "name": "Hochzeitsreportage",
+      "price": "ab 890 €",
+      "hours": "8",
+      "features": [
+        "Bis 8 Stunden",
+        "300+ bearbeitete Fotos",
+        "USB-Stick inklusive"
+      ]
+    },
+    {
+      "name": "Full Day Premium",
+      "price": "auf Anfrage",
+      "hours": "12",
+      "features": [
+        "Ganztagesbegleitung",
+        "500+ Fotos",
+        "Fotobuch-Zuschuss"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "title": "Professionelle Businessfotos: Ihr Gesicht, Ihre Marke, Ihr Erfolg.",
+  "description": "Ihr Businessfoto ist oft der erste Händedruck. Es entscheidet in Sekundenbruchteilen über Vertrauen, Kompetenz und Sympathie.",
+  "benefits": [
+    "Mobiles Studio – ich komme zu Ihnen",
+    "Konsistenter Look für das gesamte Team",
+    "Schnelle Lieferung in 3–5 Werktagen",
+    "Saubere Nutzungsrechte inklusive"
+  ],
+  "packages": [
+    {
+      "name": "Quick Shot",
+      "price": "ab 149 €",
+      "features": [
+        "30 Min. Shooting",
+        "5 bearbeitete Fotos",
+        "Studio oder mobil"
+      ]
+    },
+    {
+      "name": "Business Classic",
+      "price": "ab 289 €",
+      "features": [
+        "60–90 Min. Shooting",
+        "15 bearbeitete Fotos",
+        "2 Bildversionen",
+        "Nutzungsrecht Web & Print"
+      ]
+    },
+    {
+      "name": "Team Shooting",
+      "price": "auf Anfrage",
+      "features": [
+        "Ganztags-Produktion",
+        "Mobiles Studio bei Ihnen",
+        "Alle Nutzungsrechte"
+      ]
+    }
+  ]
+}
