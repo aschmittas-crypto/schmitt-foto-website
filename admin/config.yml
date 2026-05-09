@@ -1,0 +1,102 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+locale: de
+
+collections:
+  - name: "pages"
+    label: "Seiten"
+    files:
+      - label: "Homepage"
+        name: "home"
+        file: "_data/home.json"
+        fields:
+          - { label: "Hero Titel", name: "hero_title", widget: "string" }
+          - { label: "Hero Untertitel", name: "hero_sub", widget: "text" }
+          - { label: "Über mich Text 1", name: "about_text1", widget: "text" }
+          - { label: "Über mich Text 2", name: "about_text2", widget: "text" }
+          - { label: "Zitat", name: "quote", widget: "string" }
+          - label: "Statistiken"
+            name: "stats"
+            widget: "list"
+            fields:
+              - { label: "Zahl", name: "number", widget: "number" }
+              - { label: "Bezeichnung", name: "label", widget: "string" }
+
+      - label: "Über mich"
+        name: "about"
+        file: "_data/about.json"
+        fields:
+          - { label: "Titel", name: "title", widget: "string" }
+          - { label: "Einleitung", name: "intro", widget: "text" }
+          - { label: "Text Absatz 1", name: "text1", widget: "text" }
+          - { label: "Text Absatz 2", name: "text2", widget: "text" }
+          - { label: "Zitat", name: "quote", widget: "string" }
+          - { label: "Foto", name: "photo", widget: "image" }
+
+      - label: "Kontakt"
+        name: "contact"
+        file: "_data/contact.json"
+        fields:
+          - { label: "Intro Text", name: "intro", widget: "text" }
+          - { label: "Telefon Mobil", name: "phone_mobile", widget: "string" }
+          - { label: "Telefon Studio", name: "phone_studio", widget: "string" }
+          - { label: "E-Mail", name: "email", widget: "string" }
+          - { label: "Adresse", name: "address", widget: "text" }
+
+  - name: "leistungen"
+    label: "Leistungen"
+    files:
+      - label: "Businessfotos"
+        name: "businessfotos"
+        file: "_data/businessfotos.json"
+        fields:
+          - { label: "Titel", name: "title", widget: "string" }
+          - { label: "Beschreibung", name: "description", widget: "text" }
+          - { label: "Vorteile", name: "benefits", widget: "list" }
+          - label: "Pakete"
+            name: "packages"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Preis", name: "price", widget: "string" }
+              - { label: "Leistungen", name: "features", widget: "list" }
+
+      - label: "Hochzeitsfotos"
+        name: "hochzeitsfotos"
+        file: "_data/hochzeitsfotos.json"
+        fields:
+          - { label: "Titel", name: "title", widget: "string" }
+          - { label: "Beschreibung", name: "description", widget: "text" }
+          - label: "Pakete"
+            name: "packages"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Preis ab", name: "price", widget: "string" }
+              - { label: "Stunden", name: "hours", widget: "string" }
+              - { label: "Leistungen", name: "features", widget: "list" }
+
+      - label: "Portraits"
+        name: "portraits"
+        file: "_data/portraits.json"
+        fields:
+          - { label: "Titel", name: "title", widget: "string" }
+          - { label: "Beschreibung", name: "description", widget: "text" }
+
+  - name: "blog"
+    label: "Blog"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Datum", name: "date", widget: "datetime" }
+      - { label: "Kategorie", name: "category", widget: "select", options: ["Business", "Portrait", "Hochzeit", "Tipps", "Behind the Scenes"] }
+      - { label: "Titelbild", name: "thumbnail", widget: "image" }
+      - { label: "Kurzbeschreibung", name: "excerpt", widget: "text" }
+      - { label: "Inhalt", name: "body", widget: "markdown" }
