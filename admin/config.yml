@@ -2,91 +2,136 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
+media_folder: "images"
+public_folder: "/images"
 
 locale: de
 
+# Direkte HTML-Bearbeitung aller Seiten
 collections:
-  - name: "pages"
-    label: "Seiten"
+
+  - name: "business"
+    label: "Business-Seiten"
     files:
-      - label: "Homepage"
-        name: "home"
-        file: "_data/home.json"
+      - label: "Business Übersicht"
+        name: "business"
+        file: "business.html"
         fields:
-          - { label: "Hero Titel", name: "hero_title", widget: "string" }
-          - { label: "Hero Untertitel", name: "hero_sub", widget: "text" }
-          - { label: "Über mich Text 1", name: "about_text1", widget: "text" }
-          - { label: "Über mich Text 2", name: "about_text2", widget: "text" }
-          - { label: "Zitat", name: "quote", widget: "string" }
-          - label: "Statistiken"
-            name: "stats"
-            widget: "list"
-            fields:
-              - { label: "Zahl", name: "number", widget: "number" }
-              - { label: "Bezeichnung", name: "label", widget: "string" }
+          - { label: "Seiteninhalt (HTML)", name: "body", widget: "code", default_language: "html", allow_language_selection: false, output_code_only: true }
 
-      - label: "Über mich"
-        name: "about"
-        file: "_data/about.json"
+      - label: "Zusammenarbeit"
+        name: "zusammenarbeit"
+        file: "zusammenarbeit.html"
         fields:
-          - { label: "Titel", name: "title", widget: "string" }
-          - { label: "Einleitung", name: "intro", widget: "text" }
-          - { label: "Text Absatz 1", name: "text1", widget: "text" }
-          - { label: "Text Absatz 2", name: "text2", widget: "text" }
-          - { label: "Zitat", name: "quote", widget: "string" }
-          - { label: "Foto", name: "photo", widget: "image" }
+          - { label: "Seiteninhalt (HTML)", name: "body", widget: "code", default_language: "html", allow_language_selection: false, output_code_only: true }
 
-      - label: "Kontakt"
-        name: "contact"
-        file: "_data/contact.json"
-        fields:
-          - { label: "Intro Text", name: "intro", widget: "text" }
-          - { label: "Telefon Mobil", name: "phone_mobile", widget: "string" }
-          - { label: "Telefon Studio", name: "phone_studio", widget: "string" }
-          - { label: "E-Mail", name: "email", widget: "string" }
-          - { label: "Adresse", name: "address", widget: "text" }
-
-  - name: "leistungen"
-    label: "Leistungen"
-    files:
       - label: "Businessfotos"
         name: "businessfotos"
-        file: "_data/businessfotos.json"
+        file: "businessfotos.html"
         fields:
-          - { label: "Titel", name: "title", widget: "string" }
-          - { label: "Beschreibung", name: "description", widget: "text" }
-          - { label: "Vorteile", name: "benefits", widget: "list" }
-          - label: "Pakete"
-            name: "packages"
-            widget: "list"
-            fields:
-              - { label: "Name", name: "name", widget: "string" }
-              - { label: "Preis", name: "price", widget: "string" }
-              - { label: "Leistungen", name: "features", widget: "list" }
+          - { label: "Seiteninhalt (HTML)", name: "body", widget: "code", default_language: "html", allow_language_selection: false, output_code_only: true }
 
-      - label: "Hochzeitsfotos"
-        name: "hochzeitsfotos"
-        file: "_data/hochzeitsfotos.json"
+      - label: "Videos & Imagefilme"
+        name: "videos"
+        file: "videos-und-filme.html"
         fields:
-          - { label: "Titel", name: "title", widget: "string" }
-          - { label: "Beschreibung", name: "description", widget: "text" }
-          - label: "Pakete"
-            name: "packages"
-            widget: "list"
-            fields:
-              - { label: "Name", name: "name", widget: "string" }
-              - { label: "Preis ab", name: "price", widget: "string" }
-              - { label: "Stunden", name: "hours", widget: "string" }
-              - { label: "Leistungen", name: "features", widget: "list" }
+          - { label: "Seiteninhalt (HTML)", name: "body", widget: "code", default_language: "html", allow_language_selection: false, output_code_only: true }
+
+      - label: "Social-Media-Content"
+        name: "social"
+        file: "social-media-content.html"
+        fields:
+          - { label: "Seiteninhalt (HTML)", name: "body", widget: "code", default_language: "html", allow_language_selection: false, output_code_only: true }
+
+      - label: "Standortmarketing"
+        name: "standortmarketing"
+        file: "standortmarketing.html"
+        fields:
+          - { label: "Seiteninhalt (HTML)", name: "body", widget: "code", default_language: "html", allow_language_selection: false, output_code_only: true }
+
+      - label: "Referenzen"
+        name: "referenzen"
+        file: "referenzen.html"
+        fields:
+          - { label: "Seiteninhalt (HTML)", name: "body", widget: "code", default_language: "html", allow_language_selection: false, output_code_only: true }
+
+  - name: "privat"
+    label: "Private Shootings"
+    files:
+      - label: "Privatkunden Übersicht"
+        name: "privatkunden"
+        file: "privatkunden.html"
+        fields:
+          - { label: "Seiteninhalt (HTML)", name: "body", widget: "code", default_language: "html", allow_language_selection: false, output_code_only: true }
 
       - label: "Portraits"
         name: "portraits"
-        file: "_data/portraits.json"
+        file: "portraits.html"
         fields:
-          - { label: "Titel", name: "title", widget: "string" }
-          - { label: "Beschreibung", name: "description", widget: "text" }
+          - { label: "Seiteninhalt (HTML)", name: "body", widget: "code", default_language: "html", allow_language_selection: false, output_code_only: true }
+
+      - label: "Bewerbungsfotos"
+        name: "bewerbungsfotos"
+        file: "bewerbungsfotos.html"
+        fields:
+          - { label: "Seiteninhalt (HTML)", name: "body", widget: "code", default_language: "html", allow_language_selection: false, output_code_only: true }
+
+      - label: "Hochzeitsfotos"
+        name: "hochzeitsfotos"
+        file: "hochzeitsfotos.html"
+        fields:
+          - { label: "Seiteninhalt (HTML)", name: "body", widget: "code", default_language: "html", allow_language_selection: false, output_code_only: true }
+
+      - label: "Familienfotos"
+        name: "familienfotos"
+        file: "familienfotos.html"
+        fields:
+          - { label: "Seiteninhalt (HTML)", name: "body", widget: "code", default_language: "html", allow_language_selection: false, output_code_only: true }
+
+      - label: "Paarfotos"
+        name: "paarfotos"
+        file: "paarfotos.html"
+        fields:
+          - { label: "Seiteninhalt (HTML)", name: "body", widget: "code", default_language: "html", allow_language_selection: false, output_code_only: true }
+
+      - label: "Akt & Erotikfotos"
+        name: "aktfotos"
+        file: "aktfotos.html"
+        fields:
+          - { label: "Seiteninhalt (HTML)", name: "body", widget: "code", default_language: "html", allow_language_selection: false, output_code_only: true }
+
+  - name: "info"
+    label: "Info-Seiten"
+    files:
+      - label: "Über mich"
+        name: "ueber-mich"
+        file: "ueber-mich.html"
+        fields:
+          - { label: "Seiteninhalt (HTML)", name: "body", widget: "code", default_language: "html", allow_language_selection: false, output_code_only: true }
+
+      - label: "Portfolio / Galerie"
+        name: "galerie"
+        file: "galerie.html"
+        fields:
+          - { label: "Seiteninhalt (HTML)", name: "body", widget: "code", default_language: "html", allow_language_selection: false, output_code_only: true }
+
+      - label: "FAQ"
+        name: "faq"
+        file: "faq.html"
+        fields:
+          - { label: "Seiteninhalt (HTML)", name: "body", widget: "code", default_language: "html", allow_language_selection: false, output_code_only: true }
+
+      - label: "Kontakt"
+        name: "kontakt"
+        file: "kontakt.html"
+        fields:
+          - { label: "Seiteninhalt (HTML)", name: "body", widget: "code", default_language: "html", allow_language_selection: false, output_code_only: true }
+
+      - label: "Homepage"
+        name: "index"
+        file: "index.html"
+        fields:
+          - { label: "Seiteninhalt (HTML)", name: "body", widget: "code", default_language: "html", allow_language_selection: false, output_code_only: true }
 
   - name: "blog"
     label: "Blog"
@@ -97,6 +142,6 @@ collections:
       - { label: "Titel", name: "title", widget: "string" }
       - { label: "Datum", name: "date", widget: "datetime" }
       - { label: "Kategorie", name: "category", widget: "select", options: ["Business", "Portrait", "Hochzeit", "Tipps", "Behind the Scenes"] }
-      - { label: "Titelbild", name: "thumbnail", widget: "image" }
+      - { label: "Titelbild", name: "thumbnail", widget: "image", required: false }
       - { label: "Kurzbeschreibung", name: "excerpt", widget: "text" }
       - { label: "Inhalt", name: "body", widget: "markdown" }
