@@ -260,7 +260,7 @@ em { font-style: italic; color: var(--gold); font-family: var(--font-head); }
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(30,24,18,0.52),rgba(30,24,18,0.52)), linear-gradient(135deg, #2a2520 0%, #1a1714 40%, #2d2419 100%);
+  background: linear-gradient(rgba(40,40,40,0.62),rgba(40,40,40,0.62)), linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%);
   background-size: cover;
   background-position: center;
 }
@@ -667,23 +667,26 @@ em { font-style: italic; color: var(--gold); font-family: var(--font-head); }
 
 /* ── PAGE HERO (Inner Pages) ────────────────────────────────── */
 .page-hero {
-  background: linear-gradient(rgba(30,24,18,0.52),rgba(30,24,18,0.52)),
+  background: linear-gradient(rgba(40,40,40,0.62),rgba(40,40,40,0.62)),
               linear-gradient(135deg, #2a2520 0%, #1a1714 60%, #2d2419 100%);
   background-size: cover;
   background-position: center;
-  padding: calc(var(--nav-h) + 60px) 0 60px;
+  min-height: 100vh;
+  padding: calc(var(--nav-h) + 80px) 0 80px;
   position: relative;
   overflow: hidden;
   text-align: center;
+  display: flex;
+  align-items: center;
 }
 .page-hero::before {
   content: none;
 }
-.page-hero-content { position: relative; z-index: 1; }
+.page-hero-content { position: relative; z-index: 1; width: 100%; padding: 0 20px; }
 .page-hero-eyebrow { color: var(--gold-light); font-family: var(--font-head); font-size: 0.72rem; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; margin-bottom: 14px; display: block; }
-.page-hero h1 { color: var(--white); font-weight: 300; margin-bottom: 18px; }
+.page-hero h1 { color: var(--white); font-weight: 300; margin-bottom: 22px; font-size: clamp(2rem, 4.5vw, 3.2rem); }
 .page-hero h1 em { font-weight: 600; color: var(--gold-light); }
-.page-hero p { color: rgba(255,255,255,.6); max-width: 600px; margin: 0 auto 32px; }
+.page-hero p { color: rgba(255,255,255,.72); max-width: 640px; margin: 0 auto 36px; font-size: clamp(0.95rem, 1.5vw, 1.1rem); line-height: 1.7; }
 
 /* ── INNER PAGE CONTENT ─────────────────────────────────────── */
 .page-content { padding: clamp(60px, 8vw, 100px) 0; }
