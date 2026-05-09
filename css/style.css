@@ -260,7 +260,9 @@ em { font-style: italic; color: var(--gold); font-family: var(--font-head); }
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #2a2520 0%, #1a1714 40%, #2d2419 100%);
+  background: linear-gradient(rgba(30,24,18,0.52),rgba(30,24,18,0.52)), linear-gradient(135deg, #2a2520 0%, #1a1714 40%, #2d2419 100%);
+  background-size: cover;
+  background-position: center;
 }
 .hero-overlay {
   position: absolute;
@@ -665,17 +667,17 @@ em { font-style: italic; color: var(--gold); font-family: var(--font-head); }
 
 /* ── PAGE HERO (Inner Pages) ────────────────────────────────── */
 .page-hero {
-  background: linear-gradient(135deg, #2a2520 0%, #1a1714 60%, #2d2419 100%);
+  background: linear-gradient(rgba(30,24,18,0.52),rgba(30,24,18,0.52)),
+              linear-gradient(135deg, #2a2520 0%, #1a1714 60%, #2d2419 100%);
+  background-size: cover;
+  background-position: center;
   padding: calc(var(--nav-h) + 60px) 0 60px;
   position: relative;
   overflow: hidden;
   text-align: center;
 }
 .page-hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse at 30% 50%, rgba(184,150,62,.12) 0%, transparent 60%);
+  content: none;
 }
 .page-hero-content { position: relative; z-index: 1; }
 .page-hero-eyebrow { color: var(--gold-light); font-family: var(--font-head); font-size: 0.72rem; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; margin-bottom: 14px; display: block; }
